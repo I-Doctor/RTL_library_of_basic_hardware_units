@@ -16,9 +16,16 @@ Here are some mplementations of some basic hardware units in RTL language (veril
 - cross_bar: 
 - benes_network:
 
+# Change log
 
-# V1.0 (20230518)
-Only original files of these modules are added:
+## V1.0 (20230511)
+Create the repo.
+
+
+# TODO
+
+## V1.1 (20230518)
+Add original files of these modules:
 - systolic_array: xinhao
 - tensor_core: jun
 - mac_tree: hongyi
@@ -27,10 +34,10 @@ Only original files of these modules are added:
 - prefix_sum: kai
 - fan: kai
 
-# V1.1 (20230525)
+## V1.2 (20230525)
 Organize the code style.
 Clearify the file structure, input, output, function defination, parameter of each module in code file and readme document.
 Make the plan of parameterize these modules.
 
-# V2.1 (20230608)
+## V2.1 (20230608)
 Make each module parameterized, both in code and document.
