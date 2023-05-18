@@ -1,8 +1,8 @@
-# Verilog Style
-Using verilog gramma.
+# Verilog Code Style
+Using verilog syntax.
 
 ## tab
-Use tab as four space.
+Replace tab with 4 spaces.
 
 ## head info
 ```
@@ -10,21 +10,21 @@ Use tab as four space.
 // Orgnization: NICSEFC
 // Engineer: 
 // 
-// Create Date: 
+// Create Date: 20230511
 // Module Name: fan
-// Description: 
+// Description: flexible add net, which can Add up any number of adjacent P inputs
 // 
 // Version 0.1: File created.
 // 
 //////////////////////////////////////////////////////////////////////////////////
 ```
 
-## time step
+## time step for simulation
 ```
 `timescale 1ns / 10ps
 ```
 
-## module define and utilize
+## module defination and utilization examples
 Define xx module in xx.v:
 ```
 module xx #(
@@ -51,7 +51,7 @@ xx #(
 );
 ```
 
-## block and indentation
+## block and indentation examples
 
 Always block of register, reset,rst are posedge reset, reset_n,rst_n are negedge reset:
 ```
@@ -63,7 +63,7 @@ always @(posedge reset or posedge clk)
 assign PC_next = xxxxxxxxxxxx;
 ```
 
-Or using begin end:
+Or using begin end in the block:
 ```
 always @(posedge reset or posedge clk) begin
     if (reset) begin
