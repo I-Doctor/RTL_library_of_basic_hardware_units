@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2021/11/10 22:59:56
-// Design Name: 
-// Module Name: fp32PE
+// Create Date: 2023/5/25
+// Design Name: mac_tree
+// Module Name: mac_tree
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -15,12 +15,12 @@
 // 
 // Revision:
 // Revision 0.01 - File Created
-// Additional Comments:
+// Additional Comments: 两个8元素的向量，每个元素是32位浮点数。首先进行8个乘法，然后8个结果分别累加，输出进入8位加法树，并行合并后最终的一个结果进入输出累加器。
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module fp32PE(
+module mac_tree(
     input clk,
     input rst,
     input [31:0] A0,input [31:0] B0,
