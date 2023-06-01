@@ -6,9 +6,9 @@ This is a reimplementation of the Forwarding Adder Network (FAN) module in paper
 
 - reduce32.v: PSN with 32 input numbers and each is in FP32 format.
 
-- o1adder.v: A adder with one output port.
+- o1adder.v: A adder with one output port, used in PSN. The output port output ain or bin or ain+bin under the control of ctrl signal.
 
-- o2adder.v: A adder module with two output ports, used in FAN. The output ports are both A+B when the control signal is 0, or they are A, B respectively.
+- o2adder.v: A adder module with two output ports, used in FAN. The output ports are both ain+bin when the control signal is 1, or they are ain, bin respectively.
 
 - fp32adder.v: A common FP32 adder.
 
