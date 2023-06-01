@@ -19,9 +19,9 @@ This is a reimplementation of the Forwarding Adder Network (FAN) module in paper
 
 # TODO
 
-[] change the input number bitwidth (32 for now) to a parameter
+[ ] change the input number bitwidth (32 for now) to a parameter
 
-[] Change the adder to one that can be configured in different formats (FP32 for now)
+[ ] Change the adder to one that can be configured in different formats (FP32 for now)
 
-[] change the input parallelism (32 for now) to a parameter
+[ ] change the input parallelism (32 for now) to a parameter
 
