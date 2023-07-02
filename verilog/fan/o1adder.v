@@ -21,26 +21,28 @@
 
 
 module o1adder(
-  input clk,
-  input rst_n,
-  input  [31:0] ain, 
-  input  [31:0] bin,
-  output reg [31:0] out,
-  input  [2 :0] ctrl
-  );
+    input               clk   ,
+    input               rst_n ,
+    input      [32-1:0] ain   , 
+    input      [32-1:0] bin   ,
+    output reg [32-1:0] out   ,
+    input      [3 -1:0] ctrl
+);
 
+  // combinational logic of FP32 c=ain+bin
   wire [31:0] c;
   fp32adder add(ain,bin,c);
 
+  // select ain or bin or c=ain+bin as the only one output under the control of ctrl.
   wire [31:0] o;
   assign o = ({32{ctrl[2]}}&ain) | ({32{ctrl[1]}}&bin) | ({32{ctrl[0]}}&c);
 
   always @ (posedge clk or negedge rst_n) begin
-    if(~rst_n)begin
-      out <= 0;
-    end else begin
-      out <= o;
-    end
+      if (~rst_n) begin
+          out <= 0;
+      end else begin
+          out <= o;
+      end
   end
   
 endmodule

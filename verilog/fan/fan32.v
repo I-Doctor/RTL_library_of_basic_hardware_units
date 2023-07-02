@@ -132,7 +132,7 @@ module fan32(
     wire [31:0] aout28;
     wire [31:0] aout29;
     wire [31:0] aout30;
-    //left output of each out 2 adder
+    //right output of each out 2 adder
     wire [31:0] bout0;
     wire [31:0] bout1;
     wire [31:0] bout2;
