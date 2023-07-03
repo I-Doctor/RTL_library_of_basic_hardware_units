@@ -40,7 +40,7 @@ module vector_alu#(parameter ELE_NUM = 8
         end
     endgenerate
 
-    wire [32*ELE_NUM-1:0]add_out_reg;
+    reg [32*ELE_NUM-1:0]add_out_reg;
     always @(posedge clk or posedge rst)begin
         if(rst)begin
             add_out_reg <= 0;
@@ -58,7 +58,7 @@ module vector_alu#(parameter ELE_NUM = 8
         end
     endgenerate
 
-    wire [32*ELE_NUM-1:0]mul_out_reg;
+    reg [32*ELE_NUM-1:0]mul_out_reg;
     always @(posedge clk or posedge rst)begin
         if(rst)begin
             mul_out_reg <= 0;
@@ -77,7 +77,7 @@ module vector_alu#(parameter ELE_NUM = 8
     endgenerate
 
     //choose output and use the right ctrl
-    wire [2*2-1:0]ctrl_reg;
+    reg [2*2-1:0]ctrl_reg;
     always @(posedge clk or posedge rst)begin
         if(rst)begin
             ctrl_reg <= 0;
@@ -90,7 +90,7 @@ module vector_alu#(parameter ELE_NUM = 8
 
     assign D = (ctrl_reg[1:0]==2'b00)?add_out_reg:
                (ctrl_reg[1:0]==2'b01)?mul_out_reg:
-               (ctrl_reg[1:0]==2'b10)?mul_add_out::0;
+               (ctrl_reg[1:0]==2'b10)?mul_add_out:0;
     
 
 endmodule
