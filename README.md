@@ -6,15 +6,17 @@ This repo have some implementations of some basic hardware units in RTL language
 - arithmetic_units: 
 - systolic_array: xinhao
 - tensor_core: jun
+- N2M_tensor_core: jun
 - mac_tree: hongyi
 - vector_alu: hongyi
 - bitonic_sorting: chiyue
 - prefix_sum: kai
 - fan: kai
 - mrn: 
-- merge_tree: 
-- cross_bar: 
-- benes_network:
+- merge_sort_tree: 
+- cross_bar: jun/hongyi
+- benes_network: hongyi
+- set_op_core: zhenhua
 
 # Change log
 
@@ -27,8 +29,6 @@ Add original files of these modules:
 - bitonic_sorting: chiyue
 - prefix_sum: kai
 - fan: kai
-
-# TODO
 
 ## V1.2 (20230525)
 - Add more modules:
